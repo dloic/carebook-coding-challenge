@@ -5,8 +5,7 @@ Hi dear developer!
 
 Carebook mission is to helps you and your family stay healthy with assessments, understanding of risks, and lifestyle tips. As well, keep the information of you and your family organized in one secure place—right in your hands.
 
-Your challenge is to build a simplified part of the app that displays the medical information of a list of patients.
-
+Your challenge is to build a simplified part of the app that displays a list of patient and the ability to see the details of a patient.
 
 # Requirements
 
@@ -17,9 +16,10 @@ Your challenge is to build a simplified part of the app that displays the medica
 # Non-functional requirements
 
 - Challenge is submitted as pull request against this repo (fork it and create a pull request)
-- The repo should include 3 screenshots under the /screenshots folder to showcase the app
+- The repo should include 3 screenshots under a /screenshots folder to showcase the app
 - Change the README.md to explain your solution, the issues, the way you solved them...
 - You can use external libraries if you think they will help you
+- If you're doing the Android version, please provide the final APK inside a /build folder
 
 # Supporting API
 
@@ -61,26 +61,34 @@ Where an Entry is like:
 
 ```
 {
-  "fullUrl": "http://hapi.fhir.org/baseDstu3/Patient/1520945",
+  "fullUrl": "http://hapi.fhir.org/baseDstu3/Patient/1521078",
   "resource": {
     "resourceType": "Patient",
-    "id": "1520945",
+    "id": "1521078",
     "meta": {
       "versionId": "1",
-      "lastUpdated": "2019-02-28T21:58:09.437+00:00"
+      "lastUpdated": "2019-02-28T22:47:39.578+00:00"
     },
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Don <b>JUAN </b></div><table class=\"hapiPropertyTable\"><tbody></tbody></table></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>10006579</td></tr><tr><td>Date of birth</td><td><span>10 October 1924</span></td></tr></tbody></table></div>"
     },
-    "name": [
+    "identifier": [
       {
-        "family": "Juan",
-        "given": [
-          "Don"
-        ]
+        "use": "usual",
+        "type": {
+          "text": "Computer-Stored Abulatory Records (COSTAR)"
+        },
+        "value": "10006579",
+        "assigner": {
+          "display": "AccMgr"
+        }
       }
-    ]
+    ],
+    "active": true,
+    "gender": "unknown",
+    "birthDate": "1924-10-10",
+    "deceasedBoolean": false
   },
   "search": {
     "mode": "match"
@@ -90,5 +98,5 @@ Where an Entry is like:
 
 To get the next page of result, you simply have to extract the *next url* from the *link* object, and call it again. With the previous example, you need to call http://hapi.fhir.org/baseDstu3?_getpages=32151485-6b14-4d22-95da-795be52fc505&_getpagesoffset=20&_count=20&_pretty=true&_bundletype=searchset.
 
-To get the detail of a Patient, simply extract the *full url*. With the previous example, you need to call http://hapi.fhir.org/baseDstu3/Patient/1520945.
+To get the detail of a Patient, simply extract the *full url*. With the previous example, you need to call http://hapi.fhir.org/baseDstu3/Patient/1521078.
 
