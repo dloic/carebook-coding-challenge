@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Carebook</string>
+    <string name="welcome_message">Welcome to Carebook \n\n This Application will display the patients\' information in a
+        list.\n\n You will have the ability to click on a given patient and view his details !
+    </string>
+    <string name="get_started">Let\'s get Started !</string>
+    <string name="patient_name">Name: %s</string>
+    <string name="patient_id">Id: %s</string>
+    <string name="not_available">Not available</string>
+    <string name="retry">Retry</string>
+    <string name="failed_to_fetch">The request has failed</string>
+    <string name="patient_full_details">Patient Name: %s\nPatient Id: %s\nBirthDate: %s\nGender: %s\nDeceased: %s\nActive: %s</string>
+</resources>

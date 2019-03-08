@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="material_one_square">8dp</dimen>
+    <dimen name="text_large">30sp</dimen>
+    <dimen name="text_medium">20sp</dimen>
+    <dimen name="min_height_patient_cell">40dp</dimen>
+</resources>

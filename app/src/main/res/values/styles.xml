@@ -1,0 +1,22 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CommonTheme">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/material_one_square</item>
+    </style>
+
+    <!-- used to avoid overdraw. -->
+    <style name="OnboardTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">@android:color/holo_blue_light</item>
+    </style>
+</resources>
