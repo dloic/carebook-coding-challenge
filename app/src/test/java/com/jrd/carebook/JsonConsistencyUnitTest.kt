@@ -15,7 +15,7 @@ import java.io.InputStreamReader
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class JsonConsistencyUnitTest {
     @Throws(IOException::class)
     fun readJsonFile(filename: String): String {
         val br = BufferedReader(InputStreamReader(FileInputStream(filename)))

@@ -3,12 +3,14 @@ Challenge Accepted ! :D
 #Solution:
 I used the MVVM architecture for my application. It is recommended by Google, and ensures the data integrity within lifecycle chagnes.
 I also used the android architecture components for Pagination. (PageKeyedDataSource)
-I made sure to display a progress bar while loading and a snackbar for retrying if the request fails for some reason.
-I added some kotlin doc, when relavant for understanding.
+I made sure to display a progress bar while loading
+I added a snackbar for retrying if the request fails for some reason.
+I added some kotlin doc, when relevant for understanding.
 I used constraint layouts, as recommended by Google, for a responsive UI.
-I used a snackbar if the fetch fails in order to let the user have a chance to reload the content without killing the app and restarting it.
-I wrote a small unit test to ensure that the response from the server, which i copied in a .json file is a valid JSON format
-I took some time to remove the lint warnings that were present 
+I used a snackbar if the fetch fails in order to let the user have a chance to reload the content without having to kill the application.
+I wrote a small unit test to ensure that the response from the server, which i copied in a .json file, is a valid JSON response.
+I took some time to remove the lint warnings that were present.
+
 The strings are also localized in French :)
 
 #External Frameworks:

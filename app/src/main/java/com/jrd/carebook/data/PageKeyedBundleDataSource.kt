@@ -39,10 +39,7 @@ class PageKeyedBundleDataSource(private val apiClient: ApiClient) : PageKeyedDat
                         onFailure(call, Throwable())
                     } else {
                         state.postValue(State.LOADED)
-                        var nextPageUrl = rootBundle.link.find { it.relation == Constants.NEXT_RELATION }?.url
-                        if (nextPageUrl == null) {
-                            nextPageUrl = ""
-                        }
+                        val nextPageUrl = rootBundle.link.find { it.relation == Constants.NEXT_RELATION }?.url ?: ""
                         callback.onResult(getPatientsFromBundle(rootBundle), null, ApiParams(nextPageUrl))
                     }
                 }

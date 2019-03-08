@@ -30,7 +30,7 @@ class Repository(application: MyApplication) {
     }
 
     /**
-     * Just a helper data class to transport the [State] and [pagedList] back to the view model
+     * Just a helper data class to transport the [pagedList] and [sourceLiveData] back to the view model
      */
     data class LiveDataBundle(val pagedList: LiveData<PagedList<Patient>>, val sourceLiveData: MutableLiveData<PageKeyedBundleDataSource>)
 

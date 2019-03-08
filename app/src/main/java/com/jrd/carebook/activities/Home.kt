@@ -37,7 +37,7 @@ class Home : BaseActivity() {
         recycler_patients.itemAnimator = DefaultItemAnimator()
 
         /**
-         * Observe the live data of the patients list and of the state of the loading mechanism update the UI accordingly
+         * Observe the live data of the patients list and of the state of the loading mechanism then update the UI accordingly
          */
         patientsViewModel.patientList.observe(this, Observer<PagedList<Patient>> {
             patientsAdapter.submitList(it)
