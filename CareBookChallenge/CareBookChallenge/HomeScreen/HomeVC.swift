@@ -34,6 +34,16 @@ class HomeVC: UIViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        showOnboarding()
+    }
+    
+    func showOnboarding() {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Onboarding")
+        
+        self.present(vc, animated: true, completion: nil)
+        
     }
     
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
@@ -67,6 +77,16 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let patient = viewModel.patientList[indexPath.row]
+        
+        guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") as? PatientDetailVC else { return }
+        detailVC.patientDetails = patient
+        self.navigationController?.pushViewController(detailVC, animated: true)
+       
     }
     
     func loadMorePatients() {
