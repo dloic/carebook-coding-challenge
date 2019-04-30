@@ -1,0 +1,6 @@
+framework module Pods_CareBookChallengeTests {
+  umbrella header "Pods-CareBookChallengeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
